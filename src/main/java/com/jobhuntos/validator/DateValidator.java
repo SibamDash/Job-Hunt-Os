@@ -1,4 +1,4 @@
-﻿package com.jobhuntos.validator;
+package com.jobhuntos.validator;
 import java.time.LocalDate;
 import java.time.LocalDateTime;
 public class DateValidator {

@@ -1,4 +1,4 @@
-﻿package com.jobhuntos.controller;
+package com.jobhuntos.controller;
 import com.jobhuntos.dto.StatisticsDTO;
 import com.jobhuntos.event.EventBus;
 import com.jobhuntos.service.AnalyticsService;

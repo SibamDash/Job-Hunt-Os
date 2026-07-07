@@ -1,4 +1,4 @@
-﻿package com.jobhuntos.model;
+package com.jobhuntos.model;
 import com.jobhuntos.model.enums.ConnectionStatus;
 import java.time.LocalDate;
 public class Recruiter extends BaseEntity {

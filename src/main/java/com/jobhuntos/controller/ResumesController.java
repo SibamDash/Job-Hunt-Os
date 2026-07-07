@@ -1,4 +1,4 @@
-﻿package com.jobhuntos.controller;
+package com.jobhuntos.controller;
 import com.jobhuntos.ui.DialogHelper;
 import javafx.beans.property.SimpleStringProperty;
 import javafx.collections.FXCollections;

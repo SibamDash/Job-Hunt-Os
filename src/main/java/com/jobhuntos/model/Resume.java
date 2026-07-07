@@ -1,4 +1,4 @@
-﻿package com.jobhuntos.model;
+package com.jobhuntos.model;
 import com.jobhuntos.model.enums.ResumeType;
 public class Resume extends BaseEntity {
     private String name;

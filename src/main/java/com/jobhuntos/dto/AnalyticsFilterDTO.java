@@ -1,4 +1,4 @@
-﻿package com.jobhuntos.dto;
+package com.jobhuntos.dto;
 import java.time.LocalDate;
 public class AnalyticsFilterDTO {
     public LocalDate startDate;

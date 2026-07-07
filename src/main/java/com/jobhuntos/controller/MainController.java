@@ -1,4 +1,4 @@
-﻿package com.jobhuntos.controller;
+package com.jobhuntos.controller;
 
 import com.jobhuntos.ui.NavigationManager;
 import com.jobhuntos.ui.ThemeManager;

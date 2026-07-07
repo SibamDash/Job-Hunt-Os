@@ -1,4 +1,4 @@
-﻿package com.jobhuntos.mapper;
+package com.jobhuntos.mapper;
 
 import com.jobhuntos.model.Task;
 import com.jobhuntos.dto.TaskDTO;

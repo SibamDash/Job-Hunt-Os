@@ -1,4 +1,4 @@
-﻿package com.jobhuntos.dto;
+package com.jobhuntos.dto;
 
 public class ApplicationDTO {
     private Long id;

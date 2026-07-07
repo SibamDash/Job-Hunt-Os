@@ -1,4 +1,4 @@
-﻿package com.jobhuntos.service;
+package com.jobhuntos.service;
 import com.jobhuntos.model.*;
 import java.util.ArrayList;
 import java.util.List;

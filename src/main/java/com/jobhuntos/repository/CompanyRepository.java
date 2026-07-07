@@ -1,4 +1,4 @@
-﻿package com.jobhuntos.repository;
+package com.jobhuntos.repository;
 import com.jobhuntos.model.Company;
 import com.jobhuntos.database.DatabaseManager;
 import com.jobhuntos.exception.RepositoryException;

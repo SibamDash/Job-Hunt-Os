@@ -1,4 +1,4 @@
-﻿package com.jobhuntos.repository;
+package com.jobhuntos.repository;
 import com.jobhuntos.model.Recruiter;
 import com.jobhuntos.model.enums.ConnectionStatus;
 import com.jobhuntos.database.DatabaseManager;

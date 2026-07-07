@@ -1,4 +1,4 @@
-﻿package com.jobhuntos.repository;
+package com.jobhuntos.repository;
 import com.jobhuntos.model.Interview;
 import com.jobhuntos.model.enums.InterviewType;
 import com.jobhuntos.model.enums.InterviewResult;

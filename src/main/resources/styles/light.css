@@ -1,4 +1,4 @@
-﻿/* Light theme variables */
+/* Light theme variables */
 .root {
     -fx-accent: #007acc;
     
@@ -16,7 +16,7 @@
     -fx-text-primary: #212529;
     -fx-text-secondary: #6c757d;
     
-    -fx-border-color: #dee2e6;
+    -fx-app-border: #dee2e6;
     
     -fx-input-bg: #ffffff;
     

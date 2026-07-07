@@ -1,4 +1,4 @@
-﻿package com.jobhuntos.model;
+package com.jobhuntos.model;
 import java.time.LocalDateTime;
 import java.util.Objects;
 public abstract class BaseEntity {

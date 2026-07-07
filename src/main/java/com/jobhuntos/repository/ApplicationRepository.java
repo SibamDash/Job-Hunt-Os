@@ -1,4 +1,4 @@
-﻿package com.jobhuntos.repository;
+package com.jobhuntos.repository;
 import com.jobhuntos.model.Application;
 import com.jobhuntos.model.enums.ApplicationStatus;
 import com.jobhuntos.model.enums.Priority;

@@ -1,4 +1,4 @@
-﻿package com.jobhuntos.model;
+package com.jobhuntos.model;
 import com.jobhuntos.model.enums.InterviewType;
 import com.jobhuntos.model.enums.InterviewResult;
 import java.time.LocalDateTime;

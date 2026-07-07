@@ -1,4 +1,4 @@
-﻿package com.jobhuntos.model;
+package com.jobhuntos.model;
 import java.time.LocalDateTime;
 public class ActivityLog extends BaseEntity {
     private String entityName;

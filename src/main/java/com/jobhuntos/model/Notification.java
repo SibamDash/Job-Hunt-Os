@@ -1,4 +1,4 @@
-﻿package com.jobhuntos.model;
+package com.jobhuntos.model;
 import com.jobhuntos.model.enums.NotificationStatus;
 import java.time.LocalDateTime;
 public class Notification extends BaseEntity {

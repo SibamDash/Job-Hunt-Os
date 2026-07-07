@@ -1,4 +1,4 @@
-﻿package com.jobhuntos.repository;
+package com.jobhuntos.repository;
 import java.util.List;
 import java.util.Optional;
 public interface BaseRepository<T, ID> {

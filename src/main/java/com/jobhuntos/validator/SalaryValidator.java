@@ -1,4 +1,4 @@
-﻿package com.jobhuntos.validator;
+package com.jobhuntos.validator;
 public class SalaryValidator {
     public static boolean isValid(String salary) {
         if (salary == null || salary.trim().isEmpty()) return true; // Optional field

@@ -1,4 +1,4 @@
-﻿package com.jobhuntos.dto;
+package com.jobhuntos.dto;
 import java.util.LinkedHashMap;
 import java.util.Map;
 public class ChartDataDTO {

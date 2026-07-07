@@ -1,4 +1,4 @@
-﻿package com.jobhuntos.service;
+package com.jobhuntos.service;
 import com.jobhuntos.model.Task;
 import com.jobhuntos.repository.TaskRepository;
 import com.jobhuntos.exception.ValidationException;

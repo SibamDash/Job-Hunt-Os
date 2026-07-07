@@ -1,4 +1,4 @@
-﻿package com.jobhuntos.model;
+package com.jobhuntos.model;
 public class Tag extends BaseEntity {
     private String name;
     public Tag() {}

@@ -1,4 +1,4 @@
-﻿package com.jobhuntos.service;
+package com.jobhuntos.service;
 import com.jobhuntos.model.Document;
 import com.jobhuntos.repository.DocumentRepository;
 import com.jobhuntos.exception.ValidationException;

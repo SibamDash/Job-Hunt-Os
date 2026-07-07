@@ -1,4 +1,4 @@
-﻿package com.jobhuntos.validator;
+package com.jobhuntos.validator;
 import java.util.regex.Pattern;
 public class EmailValidator {
     private static final Pattern EMAIL_PATTERN = Pattern.compile("^[A-Za-z0-9+_.-]+@(.+)$");

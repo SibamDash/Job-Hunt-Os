@@ -1,4 +1,4 @@
-﻿package com.jobhuntos.service;
+package com.jobhuntos.service;
 import com.jobhuntos.model.ActivityLog;
 import com.jobhuntos.repository.ActivityLogRepository;
 import java.time.LocalDateTime;

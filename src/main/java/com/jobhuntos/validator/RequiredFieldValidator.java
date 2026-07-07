@@ -1,4 +1,4 @@
-﻿package com.jobhuntos.validator;
+package com.jobhuntos.validator;
 public class RequiredFieldValidator {
     public static boolean isNotEmpty(String value) {
         return value != null && !value.trim().isEmpty();

@@ -1,6 +1,6 @@
-﻿package com.jobhuntos.controller;
+package com.jobhuntos.controller;
 import com.jobhuntos.ui.DialogHelper;
-import com.jobhuntos.ThemeManager;
+import com.jobhuntos.ui.ThemeManager;
 import javafx.collections.FXCollections;
 import javafx.fxml.FXML;
 import javafx.scene.control.*;
@@ -25,9 +25,9 @@ public class SettingsController {
         // Dynamic theme preview
         comboTheme.setOnAction(e -> {
             if ("DARK".equals(comboTheme.getValue())) {
-                ThemeManager.getInstance().setDarkTheme();
+                ThemeManager.setDarkTheme();
             } else {
-                ThemeManager.getInstance().setLightTheme();
+                ThemeManager.setLightTheme();
             }
         });
     }
@@ -36,4 +36,6 @@ public class SettingsController {
     @FXML private void handleUpdate() { DialogHelper.showInformation("Update", "You are on the latest version."); }
     @FXML private void handleSave() { DialogHelper.showInformation("Save Settings", "Settings saved successfully."); }
 }
+
+
 

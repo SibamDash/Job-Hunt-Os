@@ -33,7 +33,14 @@ public class ThemeManager {
         logger.info("Theme switched to: {}", isDarkMode ? "Dark" : "Light");
     }
     
+        public static void setDarkTheme() {
+        if (!isDarkMode) toggleTheme();
+    }
+    public static void setLightTheme() {
+        if (isDarkMode) toggleTheme();
+    }
     public static boolean isDarkMode() {
         return isDarkMode;
     }
 }
+

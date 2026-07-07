@@ -1,4 +1,4 @@
-﻿package com.jobhuntos.service;
+package com.jobhuntos.service;
 import com.jobhuntos.dto.AnalyticsFilterDTO;
 import com.jobhuntos.dto.ChartDataDTO;
 import com.jobhuntos.dto.StatisticsDTO;
@@ -20,10 +20,10 @@ public class AnalyticsService {
         stats.totalApplications = apps.size();
         
         for (Application a : apps) {
-            if (a.getStatus() == ApplicationStatus.OFFER) stats.offers++;
+            if (a.getStatus() == ApplicationStatus.OFFER_RECEIVED) stats.offers++;
             if (a.getStatus() == ApplicationStatus.REJECTED) stats.rejections++;
             if (a.getStatus() == ApplicationStatus.INTERVIEWING) stats.interviews++;
-            if (a.getStatus() == ApplicationStatus.APPLIED || a.getStatus() == ApplicationStatus.PHONE_SCREEN) stats.pendingApplications++;
+            if (a.getStatus() == ApplicationStatus.APPLIED || a.getStatus() == ApplicationStatus.SCREENING) stats.pendingApplications++;
             
             double sal = parseSalary(a.getSalary());
             if (sal > stats.highestSalary) stats.highestSalary = sal;
@@ -77,3 +77,4 @@ public class AnalyticsService {
         }
     }
 }
+

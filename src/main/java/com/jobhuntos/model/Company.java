@@ -1,4 +1,4 @@
-﻿package com.jobhuntos.model;
+package com.jobhuntos.model;
 public class Company extends BaseEntity {
     private String name;
     private String website;

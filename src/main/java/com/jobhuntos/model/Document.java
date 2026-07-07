@@ -1,4 +1,4 @@
-﻿package com.jobhuntos.model;
+package com.jobhuntos.model;
 import com.jobhuntos.model.enums.DocumentType;
 public class Document extends BaseEntity {
     private Long applicationId;

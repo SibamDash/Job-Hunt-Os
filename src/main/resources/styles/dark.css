@@ -1,4 +1,4 @@
-﻿/* Dark theme variables */
+/* Dark theme variables */
 .root {
     -fx-accent: #3794ff;
     
@@ -16,7 +16,7 @@
     -fx-text-primary: #cccccc;
     -fx-text-secondary: #858585;
     
-    -fx-border-color: #3e3e42;
+    -fx-app-border: #3e3e42;
     
     -fx-input-bg: #3c3c3c;
     

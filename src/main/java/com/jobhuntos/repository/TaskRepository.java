@@ -1,4 +1,4 @@
-﻿package com.jobhuntos.repository;
+package com.jobhuntos.repository;
 import com.jobhuntos.model.Task;
 import com.jobhuntos.model.enums.Priority;
 import com.jobhuntos.database.DatabaseManager;

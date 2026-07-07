@@ -1,4 +1,4 @@
-﻿package com.jobhuntos.mapper;
+package com.jobhuntos.mapper;
 
 import com.jobhuntos.model.Recruiter;
 import com.jobhuntos.dto.RecruiterDTO;

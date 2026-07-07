@@ -1,4 +1,4 @@
-﻿package com.jobhuntos.repository;
+package com.jobhuntos.repository;
 import com.jobhuntos.model.Resume;
 import com.jobhuntos.model.enums.ResumeType;
 import com.jobhuntos.database.DatabaseManager;

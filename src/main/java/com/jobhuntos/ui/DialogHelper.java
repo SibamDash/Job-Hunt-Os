@@ -1,4 +1,4 @@
-﻿package com.jobhuntos.ui;
+package com.jobhuntos.ui;
 
 import javafx.scene.control.Alert;
 import javafx.scene.control.ButtonType;

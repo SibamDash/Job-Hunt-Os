@@ -1,4 +1,4 @@
-﻿package com.jobhuntos.event;
+package com.jobhuntos.event;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.function.Consumer;

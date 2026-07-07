@@ -1,4 +1,4 @@
-﻿package com.jobhuntos.dto;
+package com.jobhuntos.dto;
 public class StatisticsDTO {
     public long totalApplications;
     public long offers;

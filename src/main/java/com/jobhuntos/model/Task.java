@@ -1,4 +1,4 @@
-﻿package com.jobhuntos.model;
+package com.jobhuntos.model;
 import com.jobhuntos.model.enums.Priority;
 import java.time.LocalDate;
 public class Task extends BaseEntity {

@@ -1,4 +1,4 @@
-﻿package com.jobhuntos.controller;
+package com.jobhuntos.controller;
 import com.jobhuntos.model.Company;
 import com.jobhuntos.service.CompanyService;
 import com.jobhuntos.ui.DialogHelper;

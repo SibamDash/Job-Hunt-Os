@@ -1,4 +1,4 @@
-﻿package com.jobhuntos.model;
+package com.jobhuntos.model;
 import java.util.Objects;
 public class Settings {
     private String key;

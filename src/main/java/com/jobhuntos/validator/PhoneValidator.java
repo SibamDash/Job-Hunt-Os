@@ -1,4 +1,4 @@
-﻿package com.jobhuntos.validator;
+package com.jobhuntos.validator;
 import java.util.regex.Pattern;
 public class PhoneValidator {
     // Basic phone validation for international or local numbers

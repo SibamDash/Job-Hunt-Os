@@ -1,4 +1,4 @@
-﻿/* Base styles common to both themes */
+/* Base styles common to both themes */
 
 .root {
     -fx-font-family: 'Segoe UI', 'Inter', 'Roboto', Helvetica, Arial, sans-serif;
@@ -20,7 +20,7 @@
     -fx-padding: 15 10;
     -fx-spacing: 5;
     -fx-border-width: 0 1 0 0;
-    -fx-border-color: -fx-border-color;
+    -fx-border-color: -fx-app-border;
 }
 
 .sidebar .button {
@@ -49,7 +49,7 @@
     -fx-background-color: -fx-toolbar-bg;
     -fx-padding: 12 20;
     -fx-border-width: 0 0 1 0;
-    -fx-border-color: -fx-border-color;
+    -fx-border-color: -fx-app-border;
     -fx-spacing: 15;
 }
 
@@ -63,7 +63,7 @@
 .search-box, .text-field, .text-area, .combo-box, .date-picker {
     -fx-background-color: -fx-input-bg;
     -fx-text-fill: -fx-text-primary;
-    -fx-border-color: -fx-border-color;
+    -fx-border-color: -fx-app-border;
     -fx-border-radius: 6;
     -fx-background-radius: 6;
     -fx-padding: 6 10;
@@ -76,7 +76,7 @@
 .button {
     -fx-background-color: -fx-button-bg;
     -fx-text-fill: -fx-button-text;
-    -fx-border-color: -fx-border-color;
+    -fx-border-color: -fx-app-border;
     -fx-border-radius: 6;
     -fx-background-radius: 6;
     -fx-padding: 6 15;
@@ -115,7 +115,7 @@
     -fx-background-color: -fx-statusbar-bg;
     -fx-padding: 5 15;
     -fx-border-width: 1 0 0 0;
-    -fx-border-color: -fx-border-color;
+    -fx-border-color: -fx-app-border;
 }
 
 .status-bar .label {
@@ -128,7 +128,7 @@
     -fx-background-color: -fx-card-bg;
     -fx-background-radius: 8;
     -fx-border-radius: 8;
-    -fx-border-color: -fx-border-color;
+    -fx-border-color: -fx-app-border;
     -fx-padding: 16;
     -fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.05), 10, 0, 0, 2);
 }
@@ -146,7 +146,7 @@
 /* Tables */
 .table-view {
     -fx-background-color: transparent;
-    -fx-border-color: -fx-border-color;
+    -fx-border-color: -fx-app-border;
     -fx-border-radius: 8;
     -fx-background-radius: 8;
 }
@@ -165,7 +165,7 @@
 .table-row-cell {
     -fx-background-color: -fx-content-bg;
     -fx-border-width: 0 0 1 0;
-    -fx-border-color: -fx-border-color;
+    -fx-border-color: -fx-app-border;
     -fx-cell-size: 45;
 }
 .table-row-cell:odd {
