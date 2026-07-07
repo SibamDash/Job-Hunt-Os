@@ -1,0 +1,23 @@
+/* Dark theme variables */
+.root {
+    -fx-sidebar-bg: #2d2d2d;
+    -fx-sidebar-text: #cccccc;
+    -fx-sidebar-hover: #3d3d3d;
+    -fx-sidebar-selected: #4d4d4d;
+    -fx-sidebar-selected-text: #ffffff;
+    
+    -fx-toolbar-bg: #3c3f41;
+    -fx-content-bg: #2b2b2b;
+    -fx-statusbar-bg: #3c3f41;
+    
+    -fx-text-primary: #bbbbbb;
+    -fx-text-secondary: #888888;
+    
+    -fx-border-color: #555555;
+    
+    -fx-input-bg: #45494a;
+    
+    -fx-button-bg: #4c5052;
+    -fx-button-text: #bbbbbb;
+    -fx-button-hover: #5c6164;
+}

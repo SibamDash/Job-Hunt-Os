@@ -1,0 +1,23 @@
+/* Light theme variables */
+.root {
+    -fx-sidebar-bg: #f3f3f3;
+    -fx-sidebar-text: #333333;
+    -fx-sidebar-hover: #e0e0e0;
+    -fx-sidebar-selected: #d0d0d0;
+    -fx-sidebar-selected-text: #000000;
+    
+    -fx-toolbar-bg: #ffffff;
+    -fx-content-bg: #ffffff;
+    -fx-statusbar-bg: #f8f8f8;
+    
+    -fx-text-primary: #1e1e1e;
+    -fx-text-secondary: #666666;
+    
+    -fx-border-color: #cccccc;
+    
+    -fx-input-bg: #ffffff;
+    
+    -fx-button-bg: #f8f8f8;
+    -fx-button-text: #333333;
+    -fx-button-hover: #e8e8e8;
+}
