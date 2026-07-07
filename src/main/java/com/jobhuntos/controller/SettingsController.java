@@ -5,6 +5,10 @@ import javafx.collections.FXCollections;
 import javafx.fxml.FXML;
 import javafx.scene.control.*;
 
+import com.jobhuntos.service.BackupService;
+import com.jobhuntos.service.RestoreService;
+import javafx.concurrent.Task;
+import java.io.File;
 public class SettingsController {
     @FXML private ComboBox<String> comboTheme;
     @FXML private ColorPicker colorPicker;
@@ -32,3 +36,4 @@ public class SettingsController {
     @FXML private void handleUpdate() { DialogHelper.showInformation("Update", "You are on the latest version."); }
     @FXML private void handleSave() { DialogHelper.showInformation("Save Settings", "Settings saved successfully."); }
 }
+

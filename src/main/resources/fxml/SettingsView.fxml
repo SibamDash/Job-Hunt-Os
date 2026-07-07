@@ -27,6 +27,10 @@ import javafx.scene.layout.*
                 <Label text="Backup Location:" prefWidth="120" />
                 <TextField fx:id="txtBackupLoc" styleClass="text-field" HBox.hgrow="ALWAYS" />
                 <Button text="Browse..." onAction="#handleBrowse" />
+            <HBox spacing="10" alignment="CENTER_LEFT">
+                <Button text="Backup Now" onAction="#handleBackup" />
+                <Button text="Restore from Backup" onAction="#handleRestore" styleClass="button-danger" />
+            </HBox>
             </HBox>
         </VBox>
         
@@ -42,3 +46,4 @@ import javafx.scene.layout.*
         </HBox>
     </VBox>
 </ScrollPane>
+

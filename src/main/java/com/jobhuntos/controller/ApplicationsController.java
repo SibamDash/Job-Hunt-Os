@@ -9,6 +9,10 @@ import javafx.fxml.FXML;
 import javafx.scene.control.*;
 import java.util.List;
 
+import com.jobhuntos.service.ExportService;
+import com.jobhuntos.service.ImportService;
+import javafx.concurrent.Task;
+import java.io.File;
 public class ApplicationsController {
     @FXML private TableView<Application> tableView;
     @FXML private TableColumn<Application, String> colCompany;
@@ -69,3 +73,4 @@ public class ApplicationsController {
     @FXML private void handlePrevPage() { }
     @FXML private void handleNextPage() { }
 }
+
