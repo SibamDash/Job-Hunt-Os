@@ -1,4 +1,4 @@
-package com.jobhuntos;
+﻿package com.jobhuntos;
 
 import com.jobhuntos.database.DatabaseInitializer;
 import com.jobhuntos.database.DatabaseManager;
@@ -72,3 +72,4 @@ public class Main extends Application {
         launch(args);
     }
 }
+
