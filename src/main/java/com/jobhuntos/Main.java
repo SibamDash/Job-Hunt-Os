@@ -1,5 +1,8 @@
 package com.jobhuntos;
 
+import com.jobhuntos.database.DatabaseInitializer;
+import com.jobhuntos.database.DatabaseManager;
+import com.jobhuntos.database.DatabaseMigration;
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
@@ -22,6 +25,16 @@ public class Main extends Application {
     public void start(Stage primaryStage) {
         try {
             logger.info("Starting Job Hunting OS...");
+            
+            // Initialize Database
+            try {
+                DatabaseManager.getInstance().getConnection();
+                DatabaseInitializer.initialize();
+                DatabaseMigration.migrate();
+            } catch (Exception e) {
+                logger.error("Critical error: Failed to initialize the database.", e);
+            }
+            
             FXMLLoader loader = new FXMLLoader(getClass().getResource("/fxml/MainView.fxml"));
             Parent root = loader.load();
 
