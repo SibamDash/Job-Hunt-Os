@@ -1,15 +1,19 @@
-package com.jobhuntos.controller;
+﻿package com.jobhuntos.controller;
 
 import com.jobhuntos.ui.NavigationManager;
 import com.jobhuntos.ui.ThemeManager;
+import com.jobhuntos.ui.DialogHelper;
+import com.jobhuntos.service.GlobalSearchService;
 import javafx.fxml.FXML;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.control.TextField;
 import javafx.scene.layout.BorderPane;
 import javafx.scene.layout.VBox;
+import javafx.scene.input.KeyCode;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
+import java.util.List;
 
 public class MainController {
     private static final Logger logger = LoggerFactory.getLogger(MainController.class);
@@ -25,69 +29,27 @@ public class MainController {
         logger.info("Initializing MainController");
         NavigationManager.setMainLayout(mainLayout);
         
-        // Load default view
+        searchField.setOnKeyPressed(event -> {
+            if (event.getCode() == KeyCode.ENTER) {
+                String query = searchField.getText();
+                List<String> results = GlobalSearchService.getInstance().search(query);
+                DialogHelper.showInformation("Search Results", String.join("\n", results));
+            }
+        });
+        
         showDashboard();
     }
 
-    @FXML
-    private void showDashboard() {
-        NavigationManager.navigateTo("/fxml/DashboardView.fxml");
-        statusLabel.setText("Ready - Dashboard");
-    }
-
-    @FXML
-    private void showApplications() {
-        NavigationManager.navigateTo("/fxml/ApplicationsView.fxml");
-        statusLabel.setText("Ready - Applications");
-    }
-
-    @FXML
-    private void showCompanies() {
-        NavigationManager.navigateTo("/fxml/CompaniesView.fxml");
-        statusLabel.setText("Ready - Companies");
-    }
-
-    @FXML
-    private void showRecruiters() {
-        NavigationManager.navigateTo("/fxml/RecruitersView.fxml");
-        statusLabel.setText("Ready - Recruiters");
-    }
-
-    @FXML
-    private void showInterviews() {
-        NavigationManager.navigateTo("/fxml/InterviewsView.fxml");
-        statusLabel.setText("Ready - Interviews");
-    }
-
-    @FXML
-    private void showResumes() {
-        NavigationManager.navigateTo("/fxml/ResumesView.fxml");
-        statusLabel.setText("Ready - Resumes");
-    }
-
-    @FXML
-    private void showAnalytics() {
-        NavigationManager.navigateTo("/fxml/AnalyticsView.fxml");
-        statusLabel.setText("Ready - Analytics");
-    }
-
-    @FXML
-    private void showDocuments() {
-        NavigationManager.navigateTo("/fxml/DocumentsView.fxml");
-        statusLabel.setText("Ready - Documents");
-    }
-
-    @FXML
-    private void showTasks() {
-        NavigationManager.navigateTo("/fxml/TasksView.fxml");
-        statusLabel.setText("Ready - Tasks");
-    }
-
-    @FXML
-    private void showSettings() {
-        NavigationManager.navigateTo("/fxml/SettingsView.fxml");
-        statusLabel.setText("Ready - Settings");
-    }
+    @FXML private void showDashboard() { NavigationManager.navigateTo("/fxml/DashboardView.fxml"); statusLabel.setText("Ready - Dashboard"); }
+    @FXML private void showApplications() { NavigationManager.navigateTo("/fxml/ApplicationsView.fxml"); statusLabel.setText("Ready - Applications"); }
+    @FXML private void showCompanies() { NavigationManager.navigateTo("/fxml/CompaniesView.fxml"); statusLabel.setText("Ready - Companies"); }
+    @FXML private void showRecruiters() { NavigationManager.navigateTo("/fxml/RecruitersView.fxml"); statusLabel.setText("Ready - Recruiters"); }
+    @FXML private void showInterviews() { NavigationManager.navigateTo("/fxml/InterviewsView.fxml"); statusLabel.setText("Ready - Interviews"); }
+    @FXML private void showResumes() { NavigationManager.navigateTo("/fxml/ResumesView.fxml"); statusLabel.setText("Ready - Resumes"); }
+    @FXML private void showAnalytics() { NavigationManager.navigateTo("/fxml/AnalyticsView.fxml"); statusLabel.setText("Ready - Analytics"); }
+    @FXML private void showDocuments() { NavigationManager.navigateTo("/fxml/DocumentsView.fxml"); statusLabel.setText("Ready - Documents"); }
+    @FXML private void showTasks() { NavigationManager.navigateTo("/fxml/TasksView.fxml"); statusLabel.setText("Ready - Tasks"); }
+    @FXML private void showSettings() { NavigationManager.navigateTo("/fxml/SettingsView.fxml"); statusLabel.setText("Ready - Settings"); }
 
     @FXML
     private void toggleTheme() {
