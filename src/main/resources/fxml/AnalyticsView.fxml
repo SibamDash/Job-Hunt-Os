@@ -1,8 +1,32 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
-
-import javafx.scene.control.Label;
-import javafx.scene.layout.VBox;
-
-<VBox alignment="CENTER" spacing="20" styleClass="content-area" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.jobhuntos.controller.AnalyticsController">
-    <Label fx:id="titleLabel" text="Analytics Page Placeholder" styleClass="content-header" />
-</VBox>
+import javafx.scene.chart.*
+import javafx.scene.control.*
+import javafx.scene.layout.*
+<ScrollPane fitToWidth="true" styleClass="content-area" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.jobhuntos.controller.AnalyticsController">
+    <VBox spacing="20">
+        <Label text="Analytics" styleClass="content-header" />
+        <GridPane hgap="20" vgap="20">
+            <!-- Application Success Rate -->
+            <VBox styleClass="card" GridPane.columnIndex="0" GridPane.rowIndex="0" GridPane.hgrow="ALWAYS">
+                <Label text="Application Success Rate" styleClass="card-title" />
+                <PieChart fx:id="pieChart" />
+            </VBox>
+            <!-- Activity Over Time -->
+            <VBox styleClass="card" GridPane.columnIndex="1" GridPane.rowIndex="0" GridPane.hgrow="ALWAYS">
+                <Label text="Applications Over Time" styleClass="card-title" />
+                <LineChart fx:id="lineChart">
+                    <xAxis><CategoryAxis label="Month" /></xAxis>
+                    <yAxis><NumberAxis label="Applications" /></yAxis>
+                </LineChart>
+            </VBox>
+            <!-- Interviews by Type -->
+            <VBox styleClass="card" GridPane.columnIndex="0" GridPane.rowIndex="1" GridPane.columnSpan="2" GridPane.hgrow="ALWAYS">
+                <Label text="Interviews by Type" styleClass="card-title" />
+                <BarChart fx:id="barChart">
+                    <xAxis><CategoryAxis label="Interview Type" /></xAxis>
+                    <yAxis><NumberAxis label="Count" /></yAxis>
+                </BarChart>
+            </VBox>
+        </GridPane>
+    </VBox>
+</ScrollPane>

@@ -1,8 +1,44 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
-
-import javafx.scene.control.Label;
-import javafx.scene.layout.VBox;
-
-<VBox alignment="CENTER" spacing="20" styleClass="content-area" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.jobhuntos.controller.SettingsController">
-    <Label fx:id="titleLabel" text="Settings Page Placeholder" styleClass="content-header" />
-</VBox>
+import javafx.scene.control.*
+import javafx.scene.layout.*
+<ScrollPane fitToWidth="true" styleClass="content-area" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.jobhuntos.controller.SettingsController">
+    <VBox spacing="20">
+        <Label text="Settings" styleClass="content-header" />
+        
+        <VBox spacing="15" styleClass="card">
+            <Label text="Appearance" styleClass="card-title" />
+            <HBox spacing="10" alignment="CENTER_LEFT">
+                <Label text="Theme Mode:" prefWidth="120" />
+                <ComboBox fx:id="comboTheme" styleClass="combo-box" />
+            </HBox>
+            <HBox spacing="10" alignment="CENTER_LEFT">
+                <Label text="Accent Color:" prefWidth="120" />
+                <ColorPicker fx:id="colorPicker" />
+            </HBox>
+        </VBox>
+        
+        <VBox spacing="15" styleClass="card">
+            <Label text="Data &amp; Backup" styleClass="card-title" />
+            <HBox spacing="10" alignment="CENTER_LEFT">
+                <Label text="Auto Backup:" prefWidth="120" />
+                <CheckBox fx:id="chkAutoBackup" text="Enable daily auto-backups" />
+            </HBox>
+            <HBox spacing="10" alignment="CENTER_LEFT">
+                <Label text="Backup Location:" prefWidth="120" />
+                <TextField fx:id="txtBackupLoc" styleClass="text-field" HBox.hgrow="ALWAYS" />
+                <Button text="Browse..." onAction="#handleBrowse" />
+            </HBox>
+        </VBox>
+        
+        <VBox spacing="15" styleClass="card">
+            <Label text="About" styleClass="card-title" />
+            <Label text="Job Hunting OS v1.0.0" style="-fx-font-weight: bold;" />
+            <Label text="A professional toolkit for managing your career search." style="-fx-text-fill: -fx-text-secondary;" />
+            <Button text="Check for Updates" onAction="#handleUpdate" />
+        </VBox>
+        
+        <HBox alignment="CENTER_RIGHT" spacing="10">
+            <Button text="Apply Settings" styleClass="button-primary" onAction="#handleSave" />
+        </HBox>
+    </VBox>
+</ScrollPane>

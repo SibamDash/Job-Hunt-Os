@@ -1,8 +1,34 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
-
-import javafx.scene.control.Label;
-import javafx.scene.layout.VBox;
-
-<VBox alignment="CENTER" spacing="20" styleClass="content-area" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.jobhuntos.controller.InterviewsController">
-    <Label fx:id="titleLabel" text="Interviews Page Placeholder" styleClass="content-header" />
-</VBox>
+import javafx.scene.control.*
+import javafx.scene.layout.*
+<BorderPane styleClass="content-area" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.jobhuntos.controller.InterviewsController">
+    <top>
+        <VBox spacing="10">
+            <Label text="Interviews" styleClass="content-header" />
+            <HBox spacing="10" alignment="CENTER_LEFT">
+                <Button text="Add Interview" styleClass="button-primary" onAction="#handleAdd" />
+            </HBox>
+        </VBox>
+    </top>
+    <center>
+        <TabPane tabClosingPolicy="UNAVAILABLE" style="-fx-background-color: transparent;">
+            <Tab text="Upcoming List">
+                <TableView fx:id="tableView" styleClass="table-view" style="-fx-border-width: 1 0 0 0;">
+                    <columns>
+                        <TableColumn fx:id="colCompany" text="Company" prefWidth="150" />
+                        <TableColumn fx:id="colType" text="Type" prefWidth="150" />
+                        <TableColumn fx:id="colDate" text="Date &amp; Time" prefWidth="150" />
+                        <TableColumn fx:id="colResult" text="Result" prefWidth="100" />
+                    </columns>
+                    <columnResizePolicy><TableView fx:constant="CONSTRAINED_RESIZE_POLICY" /></columnResizePolicy>
+                </TableView>
+            </Tab>
+            <Tab text="Calendar View">
+                <VBox alignment="CENTER" spacing="20" styleClass="card" style="-fx-padding: 50;">
+                    <Label text="Calendar View (Placeholder)" style="-fx-font-size: 24px; -fx-text-fill: -fx-text-secondary;" />
+                    <Label text="Integration with JavaFX Calendar components will go here." />
+                </VBox>
+            </Tab>
+        </TabPane>
+    </center>
+</BorderPane>

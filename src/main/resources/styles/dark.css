@@ -1,23 +1,38 @@
-/* Dark theme variables */
+﻿/* Dark theme variables */
 .root {
-    -fx-sidebar-bg: #2d2d2d;
+    -fx-accent: #3794ff;
+    
+    -fx-sidebar-bg: #1e1e1e;
     -fx-sidebar-text: #cccccc;
-    -fx-sidebar-hover: #3d3d3d;
-    -fx-sidebar-selected: #4d4d4d;
+    -fx-sidebar-hover: #2d2d2d;
+    -fx-sidebar-selected: #37373d;
     -fx-sidebar-selected-text: #ffffff;
     
-    -fx-toolbar-bg: #3c3f41;
-    -fx-content-bg: #2b2b2b;
-    -fx-statusbar-bg: #3c3f41;
+    -fx-toolbar-bg: #252526;
+    -fx-content-bg: #1e1e1e;
+    -fx-card-bg: #252526;
+    -fx-statusbar-bg: #007acc; /* VS Code style blue status bar */
     
-    -fx-text-primary: #bbbbbb;
-    -fx-text-secondary: #888888;
+    -fx-text-primary: #cccccc;
+    -fx-text-secondary: #858585;
     
-    -fx-border-color: #555555;
+    -fx-border-color: #3e3e42;
     
-    -fx-input-bg: #45494a;
+    -fx-input-bg: #3c3c3c;
     
-    -fx-button-bg: #4c5052;
-    -fx-button-text: #bbbbbb;
-    -fx-button-hover: #5c6164;
+    -fx-button-bg: #333333;
+    -fx-button-text: #cccccc;
+    -fx-button-hover: #444444;
 }
+
+.status-bar .label {
+    -fx-text-fill: #ffffff;
+}
+
+/* Adjust dark badges slightly for readability */
+.badge-success { -fx-background-color: #1e4620; -fx-text-fill: #4caf50; }
+.badge-warning { -fx-background-color: #573b00; -fx-text-fill: #ff9800; }
+.badge-danger  { -fx-background-color: #4a1317; -fx-text-fill: #f44336; }
+.badge-info    { -fx-background-color: #0b4b59; -fx-text-fill: #00bcd4; }
+.badge-primary { -fx-background-color: #0a3a6a; -fx-text-fill: #2196f3; }
+.badge-secondary{ -fx-background-color: #333333; -fx-text-fill: #9e9e9e; }

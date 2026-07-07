@@ -1,23 +1,26 @@
-/* Light theme variables */
+﻿/* Light theme variables */
 .root {
-    -fx-sidebar-bg: #f3f3f3;
-    -fx-sidebar-text: #333333;
-    -fx-sidebar-hover: #e0e0e0;
-    -fx-sidebar-selected: #d0d0d0;
-    -fx-sidebar-selected-text: #000000;
+    -fx-accent: #007acc;
+    
+    -fx-sidebar-bg: #f8f9fa;
+    -fx-sidebar-text: #495057;
+    -fx-sidebar-hover: #e9ecef;
+    -fx-sidebar-selected: #e0f2ff;
+    -fx-sidebar-selected-text: #007acc;
     
     -fx-toolbar-bg: #ffffff;
-    -fx-content-bg: #ffffff;
-    -fx-statusbar-bg: #f8f8f8;
+    -fx-content-bg: #f5f6f8;
+    -fx-card-bg: #ffffff;
+    -fx-statusbar-bg: #ffffff;
     
-    -fx-text-primary: #1e1e1e;
-    -fx-text-secondary: #666666;
+    -fx-text-primary: #212529;
+    -fx-text-secondary: #6c757d;
     
-    -fx-border-color: #cccccc;
+    -fx-border-color: #dee2e6;
     
     -fx-input-bg: #ffffff;
     
-    -fx-button-bg: #f8f8f8;
-    -fx-button-text: #333333;
-    -fx-button-hover: #e8e8e8;
+    -fx-button-bg: #ffffff;
+    -fx-button-text: #212529;
+    -fx-button-hover: #f8f9fa;
 }

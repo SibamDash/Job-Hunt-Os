@@ -1,15 +1,26 @@
-/* Base styles common to both themes */
+﻿/* Base styles common to both themes */
 
 .root {
-    -fx-font-family: 'Segoe UI', Helvetica, Arial, sans-serif;
+    -fx-font-family: 'Segoe UI', 'Inter', 'Roboto', Helvetica, Arial, sans-serif;
     -fx-font-size: 14px;
+}
+
+/* Scrollbars */
+.scroll-bar:vertical, .scroll-bar:horizontal {
+    -fx-background-color: transparent;
+}
+.scroll-bar:vertical .thumb, .scroll-bar:horizontal .thumb {
+    -fx-background-color: -fx-border-color;
+    -fx-background-radius: 4;
 }
 
 /* Sidebar styling */
 .sidebar {
     -fx-background-color: -fx-sidebar-bg;
-    -fx-padding: 10;
+    -fx-padding: 15 10;
     -fx-spacing: 5;
+    -fx-border-width: 0 1 0 0;
+    -fx-border-color: -fx-border-color;
 }
 
 .sidebar .button {
@@ -17,23 +28,26 @@
     -fx-text-fill: -fx-sidebar-text;
     -fx-alignment: center-left;
     -fx-padding: 10 15;
-    -fx-pref-width: 200;
-    -fx-background-radius: 5;
+    -fx-pref-width: 220;
+    -fx-background-radius: 6;
+    -fx-font-weight: 500;
+    -fx-cursor: hand;
 }
 
 .sidebar .button:hover {
     -fx-background-color: -fx-sidebar-hover;
 }
 
-.sidebar .button:focused {
+.sidebar .button:focused, .sidebar .button:selected {
     -fx-background-color: -fx-sidebar-selected;
     -fx-text-fill: -fx-sidebar-selected-text;
+    -fx-font-weight: bold;
 }
 
 /* Toolbar styling */
 .toolbar {
     -fx-background-color: -fx-toolbar-bg;
-    -fx-padding: 10 20;
+    -fx-padding: 12 20;
     -fx-border-width: 0 0 1 0;
     -fx-border-color: -fx-border-color;
     -fx-spacing: 15;
@@ -45,32 +59,49 @@
     -fx-font-size: 16px;
 }
 
-.search-box {
+/* Form Controls */
+.search-box, .text-field, .text-area, .combo-box, .date-picker {
     -fx-background-color: -fx-input-bg;
     -fx-text-fill: -fx-text-primary;
     -fx-border-color: -fx-border-color;
-    -fx-border-radius: 4;
-    -fx-background-radius: 4;
-    -fx-padding: 5 10;
+    -fx-border-radius: 6;
+    -fx-background-radius: 6;
+    -fx-padding: 6 10;
+}
+.search-box:focused, .text-field:focused, .text-area:focused {
+    -fx-border-color: -fx-accent;
 }
 
-.toolbar .button {
+/* Buttons */
+.button {
     -fx-background-color: -fx-button-bg;
     -fx-text-fill: -fx-button-text;
     -fx-border-color: -fx-border-color;
-    -fx-border-radius: 4;
-    -fx-background-radius: 4;
-    -fx-padding: 5 10;
+    -fx-border-radius: 6;
+    -fx-background-radius: 6;
+    -fx-padding: 6 15;
+    -fx-cursor: hand;
+    -fx-font-weight: 500;
 }
 
-.toolbar .button:hover {
+.button:hover {
     -fx-background-color: -fx-button-hover;
+}
+
+.button-primary {
+    -fx-background-color: -fx-accent;
+    -fx-text-fill: white;
+    -fx-border-color: transparent;
+}
+.button-primary:hover {
+    -fx-background-color: derive(-fx-accent, -10%);
 }
 
 /* Center Content */
 .content-area {
     -fx-background-color: -fx-content-bg;
-    -fx-padding: 30;
+    -fx-padding: 24;
+    -fx-spacing: 20;
 }
 
 .content-header {
@@ -82,7 +113,7 @@
 /* Status Bar */
 .status-bar {
     -fx-background-color: -fx-statusbar-bg;
-    -fx-padding: 5 10;
+    -fx-padding: 5 15;
     -fx-border-width: 1 0 0 0;
     -fx-border-color: -fx-border-color;
 }
@@ -91,3 +122,72 @@
     -fx-text-fill: -fx-text-secondary;
     -fx-font-size: 12px;
 }
+
+/* Cards */
+.card {
+    -fx-background-color: -fx-card-bg;
+    -fx-background-radius: 8;
+    -fx-border-radius: 8;
+    -fx-border-color: -fx-border-color;
+    -fx-padding: 16;
+    -fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.05), 10, 0, 0, 2);
+}
+.card-title {
+    -fx-font-size: 16px;
+    -fx-font-weight: bold;
+    -fx-text-fill: -fx-text-primary;
+}
+.card-value {
+    -fx-font-size: 28px;
+    -fx-font-weight: bold;
+    -fx-text-fill: -fx-accent;
+}
+
+/* Tables */
+.table-view {
+    -fx-background-color: transparent;
+    -fx-border-color: -fx-border-color;
+    -fx-border-radius: 8;
+    -fx-background-radius: 8;
+}
+.table-view .column-header-background {
+    -fx-background-color: -fx-card-bg;
+    -fx-background-radius: 8 8 0 0;
+}
+.table-view .column-header {
+    -fx-background-color: transparent;
+    -fx-size: 40;
+}
+.table-view .column-header .label {
+    -fx-text-fill: -fx-text-secondary;
+    -fx-font-weight: bold;
+}
+.table-row-cell {
+    -fx-background-color: -fx-content-bg;
+    -fx-border-width: 0 0 1 0;
+    -fx-border-color: -fx-border-color;
+    -fx-cell-size: 45;
+}
+.table-row-cell:odd {
+    -fx-background-color: -fx-card-bg;
+}
+.table-row-cell:selected {
+    -fx-background-color: -fx-sidebar-selected;
+}
+.table-row-cell:selected .text {
+    -fx-fill: -fx-sidebar-selected-text;
+}
+
+/* Badges / Chips */
+.badge {
+    -fx-padding: 4 8;
+    -fx-background-radius: 12;
+    -fx-font-size: 11px;
+    -fx-font-weight: bold;
+}
+.badge-success { -fx-background-color: #d4edda; -fx-text-fill: #155724; }
+.badge-warning { -fx-background-color: #fff3cd; -fx-text-fill: #856404; }
+.badge-danger  { -fx-background-color: #f8d7da; -fx-text-fill: #721c24; }
+.badge-info    { -fx-background-color: #d1ecf1; -fx-text-fill: #0c5460; }
+.badge-primary { -fx-background-color: #cce5ff; -fx-text-fill: #004085; }
+.badge-secondary{ -fx-background-color: #e2e3e5; -fx-text-fill: #383d41; }

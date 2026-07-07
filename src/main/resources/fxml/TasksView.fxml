@@ -1,8 +1,65 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
-
-import javafx.scene.control.Label;
-import javafx.scene.layout.VBox;
-
-<VBox alignment="CENTER" spacing="20" styleClass="content-area" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.jobhuntos.controller.TasksController">
-    <Label fx:id="titleLabel" text="Tasks Page Placeholder" styleClass="content-header" />
-</VBox>
+import javafx.scene.control.*
+import javafx.scene.layout.*
+<BorderPane styleClass="content-area" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.jobhuntos.controller.TasksController">
+    <top>
+        <VBox spacing="10">
+            <Label text="Tasks" styleClass="content-header" />
+            <HBox spacing="10" alignment="CENTER_LEFT">
+                <Button text="Add Task" styleClass="button-primary" onAction="#handleAdd" />
+            </HBox>
+        </VBox>
+    </top>
+    <center>
+        <TabPane tabClosingPolicy="UNAVAILABLE" style="-fx-background-color: transparent;">
+            <Tab text="Kanban Board">
+                <ScrollPane fitToHeight="true" fitToWidth="true" style="-fx-background-color: transparent; -fx-border-color: transparent;">
+                    <HBox spacing="20" style="-fx-padding: 10;">
+                        <!-- Todo Column -->
+                        <VBox spacing="10" prefWidth="300" style="-fx-background-color: -fx-card-bg; -fx-padding: 10; -fx-background-radius: 8;">
+                            <Label text="To Do" style="-fx-font-weight: bold; -fx-font-size: 16px;" />
+                            <VBox styleClass="card" style="-fx-padding: 10; -fx-cursor: hand;">
+                                <Label text="Update Resume" style="-fx-font-weight: bold;" />
+                                <Label text="Due: 2026-07-10" style="-fx-text-fill: -fx-text-secondary; -fx-font-size: 12px;" />
+                                <Label text="HIGH" styleClass="badge, badge-danger" />
+                            </VBox>
+                            <VBox styleClass="card" style="-fx-padding: 10; -fx-cursor: hand;">
+                                <Label text="Email Jane" style="-fx-font-weight: bold;" />
+                                <Label text="Due: 2026-07-12" style="-fx-text-fill: -fx-text-secondary; -fx-font-size: 12px;" />
+                                <Label text="MEDIUM" styleClass="badge, badge-warning" />
+                            </VBox>
+                        </VBox>
+                        <!-- In Progress Column -->
+                        <VBox spacing="10" prefWidth="300" style="-fx-background-color: -fx-card-bg; -fx-padding: 10; -fx-background-radius: 8;">
+                            <Label text="In Progress" style="-fx-font-weight: bold; -fx-font-size: 16px;" />
+                            <VBox styleClass="card" style="-fx-padding: 10; -fx-cursor: hand;">
+                                <Label text="Prepare for Google Tech Interview" style="-fx-font-weight: bold;" />
+                                <Label text="Due: 2026-07-14" style="-fx-text-fill: -fx-text-secondary; -fx-font-size: 12px;" />
+                                <Label text="HIGH" styleClass="badge, badge-danger" />
+                            </VBox>
+                        </VBox>
+                        <!-- Done Column -->
+                        <VBox spacing="10" prefWidth="300" style="-fx-background-color: -fx-card-bg; -fx-padding: 10; -fx-background-radius: 8;">
+                            <Label text="Done" style="-fx-font-weight: bold; -fx-font-size: 16px;" />
+                            <VBox styleClass="card" style="-fx-padding: 10; -fx-opacity: 0.7;">
+                                <Label text="Apply to Meta" style="-fx-font-weight: bold; -fx-strikethrough: true;" />
+                                <Label text="Due: 2026-07-01" style="-fx-text-fill: -fx-text-secondary; -fx-font-size: 12px;" />
+                            </VBox>
+                        </VBox>
+                    </HBox>
+                </ScrollPane>
+            </Tab>
+            <Tab text="List View">
+                <TableView fx:id="tableView" styleClass="table-view" style="-fx-border-width: 1 0 0 0;">
+                    <columns>
+                        <TableColumn fx:id="colTitle" text="Title" prefWidth="250" />
+                        <TableColumn fx:id="colDue" text="Due Date" prefWidth="120" />
+                        <TableColumn fx:id="colPriority" text="Priority" prefWidth="100" />
+                        <TableColumn fx:id="colStatus" text="Status" prefWidth="100" />
+                    </columns>
+                    <columnResizePolicy><TableView fx:constant="CONSTRAINED_RESIZE_POLICY" /></columnResizePolicy>
+                </TableView>
+            </Tab>
+        </TabPane>
+    </center>
+</BorderPane>
