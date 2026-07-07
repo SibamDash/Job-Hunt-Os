@@ -26,6 +26,7 @@ public class ApplicationService {
         Application saved = isNew ? repository.save(app) : (repository.update(app) ? app : null);
         if (saved != null) {
             ActivityLogService.getInstance().log("Application", saved.getId(), isNew ? "CREATED" : "UPDATED: Status=" + saved.getStatus());
+            com.jobhuntos.event.EventBus.getInstance().publish("DATA_CHANGED");
         }
         return saved;
     }
@@ -33,9 +34,11 @@ public class ApplicationService {
     public boolean delete(Long id) {
         boolean deleted = repository.delete(id);
         if (deleted) ActivityLogService.getInstance().log("Application", id, "DELETED");
+        com.jobhuntos.event.EventBus.getInstance().publish("DATA_CHANGED");
         return deleted;
     }
 
     public List<Application> getAll(int limit, int offset) { return repository.findAll(limit, offset); }
     public Application getById(Long id) { return repository.findById(id).orElse(null); }
 }
+

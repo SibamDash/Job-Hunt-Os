@@ -5,13 +5,38 @@ import javafx.scene.layout.*
 <ScrollPane fitToWidth="true" styleClass="content-area" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.jobhuntos.controller.AnalyticsController">
     <VBox spacing="20">
         <Label text="Analytics" styleClass="content-header" />
+        
+        <!-- Filters -->
+        <HBox spacing="10" alignment="CENTER_LEFT" styleClass="card">
+            <DatePicker fx:id="dpStart" promptText="Start Date" />
+            <DatePicker fx:id="dpEnd" promptText="End Date" />
+            <TextField fx:id="txtCompany" promptText="Company" styleClass="search-box" />
+            <ComboBox fx:id="comboStatus" promptText="Status" styleClass="combo-box" />
+            <Button text="Apply Filters" styleClass="button-primary" onAction="#handleFilter" />
+        </HBox>
+
+        <!-- KPI Cards -->
         <GridPane hgap="20" vgap="20">
-            <!-- Application Success Rate -->
+            <VBox styleClass="card" GridPane.columnIndex="0" GridPane.rowIndex="0" GridPane.hgrow="ALWAYS">
+                <Label text="Total Applications" styleClass="card-title" />
+                <Label fx:id="lblTotal" text="0" styleClass="card-value" />
+            </VBox>
+            <VBox styleClass="card" GridPane.columnIndex="1" GridPane.rowIndex="0" GridPane.hgrow="ALWAYS">
+                <Label text="Success Rate" styleClass="card-title" />
+                <Label fx:id="lblSuccessRate" text="0%" styleClass="card-value" />
+            </VBox>
+            <VBox styleClass="card" GridPane.columnIndex="2" GridPane.rowIndex="0" GridPane.hgrow="ALWAYS">
+                <Label text="Avg Salary" styleClass="card-title" />
+                <Label fx:id="lblAvgSalary" text="" styleClass="card-value" />
+            </VBox>
+        </GridPane>
+
+        <!-- Charts -->
+        <GridPane hgap="20" vgap="20">
             <VBox styleClass="card" GridPane.columnIndex="0" GridPane.rowIndex="0" GridPane.hgrow="ALWAYS">
                 <Label text="Application Success Rate" styleClass="card-title" />
                 <PieChart fx:id="pieChart" />
             </VBox>
-            <!-- Activity Over Time -->
             <VBox styleClass="card" GridPane.columnIndex="1" GridPane.rowIndex="0" GridPane.hgrow="ALWAYS">
                 <Label text="Applications Over Time" styleClass="card-title" />
                 <LineChart fx:id="lineChart">
@@ -19,11 +44,10 @@ import javafx.scene.layout.*
                     <yAxis><NumberAxis label="Applications" /></yAxis>
                 </LineChart>
             </VBox>
-            <!-- Interviews by Type -->
             <VBox styleClass="card" GridPane.columnIndex="0" GridPane.rowIndex="1" GridPane.columnSpan="2" GridPane.hgrow="ALWAYS">
-                <Label text="Interviews by Type" styleClass="card-title" />
+                <Label text="Salary Distribution" styleClass="card-title" />
                 <BarChart fx:id="barChart">
-                    <xAxis><CategoryAxis label="Interview Type" /></xAxis>
+                    <xAxis><CategoryAxis label="Range" /></xAxis>
                     <yAxis><NumberAxis label="Count" /></yAxis>
                 </BarChart>
             </VBox>
